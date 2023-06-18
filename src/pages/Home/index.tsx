@@ -5,7 +5,7 @@ import { Header } from "../../components/Header";
 import { TopMenu, Box, FaixaDaHome, FaixaDeAvisos, MinCarrossel } from "./styles";
 import imagem  from "../../assets/WordPresscarousel.png";
 import { motion } from 'framer-motion';
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 
 
 export function Home(){
@@ -13,9 +13,7 @@ export function Home(){
     const carousel = useRef();
     const [width, setWidth] = useState(0);
 
-useEffect(() => {
-    setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth)
-})
+
 
     return(
         <>
@@ -55,7 +53,7 @@ useEffect(() => {
                     <h1>GALERIA</h1>
                     
                     <MinCarrossel>
-                        <motion.div ref={carousel} drag="x" dragConstraints={{ right: 0, left: -width}}>
+                        <motion.div drag="x" dragConstraints={{ right: 0, left: -width}}>
                             {imagens.map(imagem => (
                                 <motion.div>
                                     <img src={imagem} />
