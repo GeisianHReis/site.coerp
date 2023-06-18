@@ -10,8 +10,7 @@ import { useRef, useState } from 'react';
 
 export function Home(){
     const imagens = [imagem, imagem, imagem, imagem, imagem, imagem];
-    const carousel = useRef();
-    const [width, setWidth] = useState(0);
+    const [width] = useState(0);
 
 
 
