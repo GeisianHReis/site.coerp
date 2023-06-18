@@ -5,7 +5,7 @@ import { Header } from "../../components/Header";
 import { TopMenu, Box, FaixaDaHome, FaixaDeAvisos, MinCarrossel } from "./styles";
 import imagem  from "../../assets/WordPresscarousel.png";
 import { motion } from 'framer-motion';
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 
 
 export function Home(){
