@@ -2,16 +2,9 @@
 import styled from "styled-components";
 
 export const MenuMobile = styled.div`
-
-    position: fixed;
-    //background-color: white;
-    right: 0;
-
-    cursor: pointer;
-
-    @media screen and (min-width: 850px) {
+    display: flex;
+    justify-content: flex-end;
+    @media screen and (min-width: 650px) {
         display: none;
     }
-`
-
-;
+`;

@@ -1,71 +1,40 @@
 import 'bootstrap/dist/css/bootstrap.css';
-import { Carousel } from "react-bootstrap";
-import { Footer } from "../../components/Footer";
-import { Header } from "../../components/Header";
-import { TopMenu, Box, FaixaDaHome, FaixaDeAvisos, MinCarrossel } from "./styles";
-import imagem  from "../../assets/WordPresscarousel.png";
-import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { Box, FaixaDaHome, FaixaDeAvisos, Galeria, GaleriaPc } from "./styles";
+import imagemTop from "../../assets/Ativo 5.png";
+import imagemCulto from "../../assets/4d576c57-f428-4662-af3d-4adf9245081a.jpg";
+import { FooterTelaMenor } from '../../components/FooterTelaMenor';
+import { TopMobile } from '../../components/TopMobile';
 
 
-export function Home(){
-    const imagens = [imagem, imagem, imagem, imagem, imagem, imagem];
-    const [width] = useState(0);
+export function Home() {
 
-
-
-    return(
+    return (
         <>
-           
-            <TopMenu/>
-            <Header/>
+            <TopMobile name="" />
             <Box>
-                    <Carousel fade>
-                        <Carousel.Item interval={1500}>
-                        <img
-                            src="https://novelas.redenoticia.com.br/imagens/2019/03/carrossel.jpg"
-                            alt="Image One"
-                        />
-                        </Carousel.Item>
-                        <Carousel.Item interval={1500}>
-                        <img
-                            src="https://novelas.redenoticia.com.br/imagens/2019/03/carrossel.jpg"
-                            alt="Image Two"
-                        />
-                        </Carousel.Item>
-                    </Carousel>
+                <img src={imagemTop}></img>
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/3atoVKcLt2M" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ></iframe>
             </Box>
             <FaixaDaHome>
+                <h1>
+                    CONFERENCIA KOINONIA
+                </h1>
+                <p>
+                    <a href='https://docs.google.com/forms/d/e/1FAIpQLSdko1BPZVtuDWyC2HvTdulMgDmh8OgH2n9ZalByZT6ToXtrKg/viewform' target='_blank'>faça aqui sua inscrição!</a>
+                </p>
 
             </FaixaDaHome>
 
             <FaixaDeAvisos>
-                <div>
-                    <h1>AVISOS</h1>
-                
-                    <p>
-                    Lorem ipsum dolor sit amet, consectetuer Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh eu
-                    </p>
-                </div>
-
-                <div>
-                    <h1>GALERIA</h1>
-                    
-                    <MinCarrossel>
-                        <motion.div drag="x" dragConstraints={{ right: 0, left: -width}}>
-                            {imagens.map(imagem => (
-                                <motion.div>
-                                    <img src={imagem} />
-                                </motion.div>
-                            ))}
-                        </motion.div>
-
-                    </MinCarrossel>
-                    
-                </div>
-
+                <GaleriaPc>
+                    <div>
+                        <h1>GALERIA</h1>
+                    </div>
+                    <Galeria> <img src={imagemCulto} alt="" /> <img src={imagemCulto} alt="" /> <img src={imagemCulto} alt="" /> <img src={imagemCulto} alt="" /> <img src={imagemCulto} alt="" /> <img src={imagemCulto} alt="" /> <img src={imagemCulto} alt="" /> <img src={imagemCulto} alt="" /> <img src={imagemCulto} alt="" /></Galeria>
+                </GaleriaPc>
+                <a target='_blank' href='https://www.instagram.com/igrejacoerp/'>Ver mais...</a>
             </FaixaDeAvisos>
-            <Footer/>
-       </>
+            <FooterTelaMenor />
+        </>
     )
 };

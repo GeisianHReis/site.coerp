@@ -2,48 +2,39 @@ import styled from "styled-components";
 
 
 export const Lateral = styled.div`
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     top: 0;
-
-    width: 3em;
-
     position: fixed;
-    
-    
-    height: 50rem;
+    height: 100%;
+    width: 10%;
+
     background-color: black;
-    vertical-align: middle;
 
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     font-size: 3em;
 
-    
     transform: scale(-1, -1);
     writing-mode: vertical-lr;
 
     color: white;
-
-    @media screen and (max-width: 850px) {
-        display: flex;
+    
+   @media screen and (max-width: 650px) {
+        display: none;
         flex-direction: row;
         align-items: center;
-        top: 0;
-        
+        justify-content: center;
+
         overflow: hidden;
-        position: fixed;
-        top: 0;
         width: 100%;
         transform: none;
         writing-mode: horizontal-tb;
-        height: 5em;
-        
+        height: 10%;
+        width: 100%;
 
         font-size: large;
-
     }
-`
+`;

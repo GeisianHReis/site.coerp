@@ -6,10 +6,19 @@ export const BoxMenu = styled.div`
     flex-direction: row;
     justify-content: center;
 
-    background-color: white;
+    margin-bottom: 3em;
 
-    
-`
+    background-color: white;
+    img{
+        width: 15%;
+        margin: 3em 0.5em 0.5em 0.5em;
+        
+    }
+    @media screen and (max-width: 650px) {
+        display: none;
+    }
+
+`;
 
 export const ButtonMenu = styled.button`
     display: flex;
@@ -25,7 +34,10 @@ export const ButtonMenu = styled.button`
     background-color: white;
 
     border-radius: 1em;
-    margin: 2em 0.5em 0.5em 0.5em;
+    border: solid 1px black;
+    color: black;
+    text-decoration: none;
+    margin: 3em 0.5em 0.5em 0.5em;
 
 
     font-family: 'Montserrat', sans-serif;
@@ -38,12 +50,16 @@ export const ButtonMenu = styled.button`
         background-color: black;
         color: white;
     }
-    &:first-child{
-        margin-left: 10em;
+    &.active{
+        background-color: black;
+        color: white;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     }
-    @media screen and (max-width: 850px) {
-        
+    &:first-child{
+        margin-left: 10%;
+    }
+    
+    @media screen and (max-width: 650px) {
         display: none;
     }
-
-`
+`;
