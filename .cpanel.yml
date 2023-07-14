@@ -2,8 +2,7 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/igrej478/public_html
-    - /usr/bin/git pull origin main
-    - /usr/local/bin/npm install
-    - /usr/local/bin/npm run build --if-present
-    - /bin/cp -R dist/* $DEPLOYPATH
-    - /bin/rm -rf dist
+    - npm install
+    - npm run build --if-present
+    - cp -R dist/* $DEPLOYPATH
+    - rm -rf dist
