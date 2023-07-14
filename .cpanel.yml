@@ -6,3 +6,4 @@ deployment:
     - npm run build
     - cp -R dist/* $DEPLOYPATH
     - rm -rf dist
+approot: /home/igrej478
