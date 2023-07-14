@@ -2,7 +2,7 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/igrej478/public_html
-    - npm ci --only=production
-    - npm run build
-    - cp -R dist/* $DEPLOYPATH
-    - rm -rf dist
+    - /usr/local/bin/npm ci --only=production
+    - /usr/local/bin/npm run build
+    - /bin/cp -R dist/* $DEPLOYPATH
+    - /bin/rm -rf dist
