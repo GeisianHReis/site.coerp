@@ -2,7 +2,7 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/igrej478/public_html
-    - /home/igrej478/repositories/site.coerp/npm install $DEPLOYPATH
+    - /home/igrej478/repositories/site.coerpCpanel/npm install $DEPLOYPATH
     - /home/igrej478/repositories/site.coerp/npm run build $DEPLOYPATH
     - /usr/local/bin/npm run build                 # Compila a aplicação React (certifique-se de que o caminho esteja correto)
     - /bin/rm -rf node_modules                      # Opcional: remove a pasta node_modules após a compilação
