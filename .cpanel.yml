@@ -2,9 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/igrej478/public_html 
-    - npm install
-    - cp -R * $DEPLOYPATH                      # Copia todos os arquivos para a pasta de implantação
-    - cd $DEPLOYPATH                                # Navega para a pasta de implantação
-    - npm install                   # Instala as dependências do Node.js (certifique-se de que o caminho esteja correto)
-    - /usr/local/bin/npm run build                 # Compila a aplicação React (certifique-se de que o caminho esteja correto)
-    - /bin/rm -rf node_modules                      # Opcional: remove a pasta node_modules após a compilação
+    - cp dist/* -R * $DEPLOYPATH    
