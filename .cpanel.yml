@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/igrej478/public_html   # Caminho para a pasta de implantação
+    - rsync -avz --delete dist/ $DEPLOYPATH          # Copia os arquivos da pasta 'dist' para a pasta de implantação
